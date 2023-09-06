@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ravintola Ungali</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dialogi.css">
+    <script src="js/dialogi.js" defer></script>
+</head>
+<body>
+    
+    <div class="container">
+        <header>
+            <nav class="clearfix">
+                <ul>
+                    <li><a href="#" id="logo">Ungali</a></li>
+                    <li><a href="#" id="etusivu">Etusivu</a></li>
+                    <li><a href="#">Ruokalista</a></li>
+                    <li><a href="#">Yhteystiedot</a></li>
+                </ul>
+                
+            </nav>
+        </header>
+        <main>
+            <div id="section1">
+                <p>Tänne lisää sisältöä seuraavina viikkoina</p>
+                <button id="open_dialog">Open Dialog</button>
+            </div>
+            <section class="about-us clearfix">
+                <img class="" src="images/restaurant.jpg" alt="Ungali ravintola" id="about-us-pic">  
+                <h2>Lisää meistä</h2>
+                
+                <article>   
+                    <h3>Tervetuloa Ungali ravintolaan</h3>
+                    <p>Täällä jaamme intohimomme herkulliseen kasvisruokaan ja kestävään elämäntapaan. Tarjoamme kasvissyöjille ja kaikille herkullisen vaihtoehdon, joka ei tingi makusta.</p>
+                </article>
+                <img src="images/basil.png" alt="basil leaf" id="basil">
+            </section>
+        </main>
+    </div>
+    <footer>   
+        <p>Copyright 2023. All Rights Reserved</p>
+    </footer>
+
+    <!-- Dialogit -->
+    <dialog>
+        <h3 id="dialog_title" class="h2">Rekisteröidy tiedoillasi</h3>
+        <img src="images/plant.png" alt="Illustration of Location Services" />
+        <!-- https://native-dialog.surge.sh/location-service.svg -->
+       <!--  <p id="dialog_description">
+            In order to give directional instructions, we kindly ask you to turn
+            on the location services.
+        </p> -->
+        <form class="my-form" action="">
+            <label class="required" for="username">Nimi</label><br>
+            <input type="text" name="username" autocomplete="name" id="nimikentta" placeholder="Nimi tähän" minlength="3" required><br>
+
+            <label class="required" for="email">Sähköposti</label><br>
+            <input type="email" name="email" autocomplete="email" id="sahkoposti" placeholder="Sähköposti tähän" pattern=".+@metropolia\.fi" required><br>
+
+            <label class="required" for="pwd">Salasana</label><br>
+            <input type="password" name="pwd" id="salasanakentta" placeholder="Salasana tähän" pattern="^(?!.*[\s])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$" required><br>
+
+            
+            
+            <div class="flex flex-space-between">
+                <input class="button" type="submit" value="Lähetä!">
+                <button class="button" id="close_dialog">Close</button>
+                <!-- <button id="confirm_dialog" class="cta">Confirm</button> -->
+            </div>
+        </form>
+        
+    </dialog>
+</body>
+</html>
