@@ -1,0 +1,260 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --green: #5a8100;
+    --green-lighter: #3B9908;
+    --orange: #ff6c02;
+    --yellow: #ffb400;
+    --beige: #fff9e9;
+    --grey: #8d7d7d;
+    --white: #ffffff;
+    --black: #000000;
+    --brown: #5d5a58;
+
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+body {
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+}
+
+/* body:has(dialog[open]) {
+    overflow-y: hidden;
+} */
+
+header, main {
+    max-width: 1000px;
+    width: 100%;
+    margin: auto;
+    padding: 0px 32px;
+    
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+    header, main {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+    
+}
+
+@media only screen and (max-width: 480px) {
+    body {
+        font-size: 12px;
+    }
+}
+
+nav {
+    background-color: var(--white);
+    box-shadow: 0px 2px 8px -1px rgba(50, 50, 93, 0.25);
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    float: left;
+}
+
+/* clearfix hack */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+a {
+    display: block;
+    line-height: 50px;
+    text-align: center;
+    padding: 10px 20px;
+}
+
+a:link {
+    text-decoration: none;
+    color: var(--brown);
+}
+
+/* a:visited {
+    color: var(--beige);
+}
+ */
+/* mouse over link */
+a:hover {
+    color: var(--black);
+}
+
+a:active {
+    color: var(--black);
+}
+  
+#logo {
+    margin-left: 20px;
+    font-size: larger;
+    font-weight: 700;;
+    text-align: left;
+    color: var(--black);
+    line-height: 50px;
+}
+
+@media screen and (max-width: 768px) {
+    li {
+        float: none;
+    }
+    
+    a {
+       line-height: 120%;
+       text-align: left;
+    }
+
+    #logo {
+        margin-left: 0;
+    }
+}
+
+.banner-container {
+    width: 100%;
+    background-color: bisque;
+    background-image: url("../images/banner-8077450_1280.png");
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: cover;
+}   
+
+.banner-container .banner-inner {
+    display: block;
+    height: 0;
+    padding-top: 44%;
+}
+
+@media screen and (max-width: 480px){
+    .banner-container {
+        background-image: url("../images/banner-8077450_768.png");
+    }   
+
+    .banner-container .banner-inner {
+        padding-top: 100%;
+    }
+}
+
+#section1 {
+    /* height: 200px; */
+}
+
+#about-us-pic {
+    width: 300px;
+    height: auto; 
+    float: left;
+    margin-right: 20px;
+    border-radius: 5%;
+    object-fit: cover;
+}
+
+.about-us {
+    background-image: url("../images/food.png");
+    background-repeat: repeat;
+    background-color: rgb(255, 249, 233);
+    padding: 60px 40px;
+    position: relative;
+    margin-top: 32px;
+}
+
+@media screen and (max-width: 768px) {
+    .about-us {
+        padding: 48px 24px;
+    }
+
+    #about-us-pic {
+        width: 250px;
+        height: 200px; 
+    }
+}
+
+@media screen and (max-width: 600px) { 
+    #about-us-pic {
+        width: 200px;
+        height: 200px; 
+    }
+}
+
+@media screen and (max-width: 530px) { 
+    .about-us {
+        padding: 16px;
+    }
+
+    #about-us-pic {
+        float: none;
+        width: 100%;
+    }
+}
+
+
+#basil {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 25%;
+    transform: translate(-2%, -65%);
+}
+
+.about-us h2 {
+    text-transform: uppercase;
+    margin: 0;
+    color: var(--grey);
+    font-size: 1em;
+}
+
+
+.about-us h3 {
+    margin: 0;
+}
+
+@media screen and (max-width: 530px) { 
+    .about-us h2 {
+        padding-top: 12px;
+    }
+
+    #basil {
+        visibility: hidden;
+    }
+}
+footer {
+    background-color: var(--orange);
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    width: 100%;
+    margin: auto;
+}
+
+@media screen and (max-width: 1000px) {
+    header, main  {
+       
+    }
+}
+
+@media screen and (max-width: 768px) {
+    
+}
