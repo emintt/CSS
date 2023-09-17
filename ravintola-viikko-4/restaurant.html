@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ravintola Ungali</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dialogi.css">
+    <script src="js/dialogi.js" defer></script>
+</head>
+<body>
+    <header class="row">
+        <nav class="navigation clearfix">
+            <ul>
+                <li class="col-4"><a href="#" id="logo">Lucky</a></li>
+                <li class="col-2"><a href="#" id="etusivu">Etusivu</a></li>
+                <li class="col-2"><a href="#">Ruokalista</a></li>
+                <li class="col-2"><a href="#">Yhteystiedot</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="banner-container">
+           <div class="banner-text-container">
+                <h1>Lucky</h1>
+                <p>Tutustu meidän ruokalistoihin. <span class="hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, eos.</span></p>
+                <button class="button">Tilaa tästä</button>
+           </div>
+           <div class="banner-emty-space"></div>
+        </div>
+        <div class="menu-container">
+            <div class="menu-header">
+                <h2>Meidän ruokalista</h2>
+            </div>
+            <div class="menu-main">
+                <ul class="menu-items">   
+                    <li class="menu-item">
+                        <a href="#"">
+                            <img src="images/icons8-spring-roll-48.png" alt="">
+                            <span>Alkuruoat</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#"">
+                            <img src="images/icons8-salad-48.png" alt="">
+                            <span>Slaatit</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#"">
+                            <img src="images/icons8-soup-plate-48.png" alt="">
+                            <span>Keitot</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#"">
+                            <img src="images/icons8-chinese-noodle-48.png" alt="">
+                            <span>Wokit</span>
+                        </a>
+                       
+                    </li>
+                    <li class="menu-item">
+                        <a href="#"">
+                            <img src="images/icons8-cookie-48.png" alt="">
+                            <span>Jälkiruoat</span>
+                        </a>
+                    </li>
+                    
+            </div>
+        </div>
+        <div id="section1">
+            <p>Tänne lisää sisältöä seuraavina viikkoina</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi dolorum sint provident similique eligendi quis amet perspiciatis, molestias quod dolore repellat quam voluptates quos sequi ut, eveniet sed quaerat repellendus? Quidem, nihil? Ducimus, architecto. Ex, fugiat quos. Corporis, laudantium obcaecati. Perferendis error sapiente distinctio perspiciatis ipsum illum eum necessitatibus at?</p>
+            <button id="open_dialog">Open Dialog</button>
+        </div>
+        <section class="about-us clearfix">
+            <img class="" src="images/restaurant.jpg" alt="Ungali ravintola" id="about-us-pic">  
+            <h2>Lisää meistä</h2>
+            
+            <article>   
+                <h3>Tervetuloa Lucky ravintolaan</h3>
+                <p>Täällä jaamme intohimomme herkulliseen kasvisruokaan ja kestävään elämäntapaan. Tarjoamme kasvissyöjille ja kaikille herkullisen vaihtoehdon, joka ei tingi makusta.</p>
+            </article>
+            <img src="images/basil.png" alt="basil leaf" id="basil">
+        </section>
+    </main>
+    <footer>   
+        <p>Copyright 2023. All Rights Reserved</p>
+    </footer>
+
+    <!-- Dialogit -->
+    <dialog>
+        <h3 id="dialog_title" class="h2">Rekisteröidy tiedoillasi</h3>
+        <img src="images/plant.png" alt="Illustration of Location Services" />
+        <!-- https://native-dialog.surge.sh/location-service.svg -->
+       <!--  <p id="dialog_description">
+            In order to give directional instructions, we kindly ask you to turn
+            on the location services.
+        </p> -->
+        <form class="my-form" action="">
+            <label class="required" for="username">Nimi</label><br>
+            <input type="text" name="username" autocomplete="name" id="nimikentta" placeholder="Nimi tähän" minlength="3" required><br>
+
+            <label class="required" for="email">Sähköposti</label><br>
+            <input type="email" name="email" autocomplete="email" id="sahkoposti" placeholder="Sähköposti tähän" pattern=".+@metropolia\.fi" required><br>
+
+            <label class="required" for="pwd">Salasana</label><br>
+            <input type="password" name="pwd" id="salasanakentta" placeholder="Salasana tähän" pattern="^(?!.*[\s])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$" required><br>
+
+            
+            
+            <div class="flex flex-space-between">
+                <input class="button" type="submit" value="Lähetä!">
+                <button class="button" id="close_dialog">Close</button>
+                <!-- <button id="confirm_dialog" class="cta">Confirm</button> -->
+            </div>
+        </form>
+        
+    </dialog>
+</body>
+</html>

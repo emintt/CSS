@@ -1,0 +1,396 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --green: #5a8100;
+    --green-lighter: #3B9908;
+    --orange: #ff6c02;
+    --yellow: #ffb400;
+    --beige: #fff9e9;
+    --grey: #8d7d7d;
+    --white: #ffffff;
+    --black: #000000;
+    --brown: #5d5a58;
+
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+body {
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+}
+
+/* body:has(dialog[open]) {
+    overflow-y: hidden;
+} */
+
+header, main {
+    max-width: 1000px;
+    width: 100%;
+    margin: auto;
+    padding: 0px 32px;
+    
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+    header, main {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+    
+}
+
+@media only screen and (max-width: 480px) {
+    body {
+        font-size: 12px;
+    }
+}
+
+.navigation {
+    background-color: var(--white);
+    height: 4em;
+    box-shadow: 0px 2px 8px -1px rgba(50, 50, 93, 0.25);
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.navigation li {
+    float: left;
+    height: 100%;
+}
+
+/* clearfix hack */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.navigation a {
+    display: block;
+    line-height: 4em;
+    height: 100%;
+    text-align: center;
+}
+
+a:link {
+    text-decoration: none;
+    color: var(--brown);
+}
+
+/* a:visited {
+    color: var(--beige);
+}
+ */
+/* mouse over link */
+a:hover {
+    color: var(--black);
+}
+
+a:active {
+    color: var(--black);
+}
+  
+#logo {
+    font-size: 1.5em;
+    font-weight: 700;;
+    text-align: left;
+    color: var(--green);
+    line-height: 2.5em;
+    padding: 0 1em;
+}
+
+@media screen and (max-width: 768px) {
+    .navigation li {
+        float: none;
+    }
+    
+    .navigation a {
+       line-height: 120%;
+       text-align: left;
+    }
+
+    #logo {
+        margin-left: 0;
+    }
+}
+
+.banner-container {
+    display: flex;
+    width: 100%;
+    height: 60vh;
+    max-height: 500px;
+    background-color: bisque;
+    background-image: url("../images/pexels-ella-olsson-PhotoRoom.png");
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: cover;
+}   
+
+.banner-text-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1.5em;
+    padding-bottom: 3.5em;
+}
+
+.banner-emty-space {
+    flex: 1;
+}
+.banner-container h1 {
+    margin: 0;
+    font-size: 4.5vw;
+    color: var(--green);
+}
+
+.banner-container p {
+    font-size: 1.125em;
+}
+
+
+.banner-text-container .button {
+    display: block;
+    background-color: var(--orange);
+    margin-top: 0;
+    color: var(--white);
+    border-radius: 3em;
+    width: 9em;
+    height: 2em;
+}
+
+@media screen and (max-width: 768px){
+    .banner-container {
+        height: 50vh;
+        max-height: 450px;
+        
+    }   
+
+    .banner-text-container {
+        padding-bottom: 1.5em;
+    }
+
+    .banner-text-container .button {
+        width: 120px;
+        font-size: 1em;
+    }
+
+}
+@media screen and (max-width: 660px){
+    .banner-container {
+        max-height: 300px;
+    }   
+
+    .banner-text-container {
+        flex: 2;
+    }
+
+    .banner-text-container p {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 1em;
+    }
+    .banner-emty-space {
+        flex: 1;
+    }
+
+}
+
+@media screen and (max-width: 530px) { 
+    .hidden {
+        display: none;
+    }
+    .banner-text-container .button {
+        width: 8em;
+        font-size: 0.9em;
+        height: 3em;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .banner-text-container .button {
+        font-size: 0.8em;
+    }
+}
+
+
+
+.menu-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5em 12em;
+}
+
+.menu-header {
+    align-self: center;
+}
+
+.menu-items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.menu-item a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu-item a {
+    line-height: 1.6;
+}
+
+.menu-item a img {
+    margin-bottom: 0.3em;
+}
+.menu-item a span {
+    margin: 0;
+    border: 1px solid var(--green);
+    border-radius: 5em;
+    padding: 0.5em 1em;
+}
+
+@media screen and (max-width: 970px) {
+    .menu-container {
+        padding: 0.5em 7em;
+    }
+    
+}
+
+
+@media screen and (max-width: 660px) {
+    .menu-container {
+        padding: 0.5em 4em;
+    }
+    
+}
+
+@media screen and (max-width: 600px) {
+    .menu-container {
+        padding: 0.5em 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .menu-items {
+        justify-content: center;
+    }
+    .menu-item a img {
+        max-width: 40px;
+    }
+    .menu-item a span {
+        padding: 0.3em 0.5em;
+    }
+}
+
+
+#about-us-pic {
+    width: 300px;
+    height: auto; 
+    float: left;
+    margin-right: 20px;
+    border-radius: 5%;
+    object-fit: cover;
+}
+
+.about-us {
+    background-image: url("../images/food.png");
+    background-repeat: repeat;
+    background-color: rgb(255, 249, 233);
+    padding: 60px 40px;
+    position: relative;
+    margin-top: 32px;
+}
+
+@media screen and (max-width: 768px) {
+    .about-us {
+        padding: 48px 24px;
+    }
+
+    #about-us-pic {
+        width: 250px;
+        height: 200px; 
+    }
+}
+
+@media screen and (max-width: 600px) { 
+    #about-us-pic {
+        width: 200px;
+        height: 200px; 
+    }
+}
+
+@media screen and (max-width: 530px) { 
+    .about-us {
+        padding: 16px;
+    }
+
+    #about-us-pic {
+        float: none;
+        width: 100%;
+    }
+}
+
+
+#basil {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 25%;
+    transform: translate(-2%, -65%);
+}
+
+.about-us h2 {
+    text-transform: uppercase;
+    margin: 0;
+    color: var(--grey);
+    font-size: 1em;
+}
+
+
+.about-us h3 {
+    margin: 0;
+}
+
+@media screen and (max-width: 530px) { 
+    .about-us h2 {
+        padding-top: 12px;
+    }
+
+    #basil {
+        visibility: hidden;
+    }
+}
+footer {
+    background-color: var(--orange);
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    width: 100%;
+    margin: auto;
+}
+
